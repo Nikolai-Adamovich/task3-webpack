@@ -3,7 +3,6 @@ import '../scss/style.scss';
 
 import '@babel/polyfill';
 import 'whatwg-fetch';
-import getNews from './get-news.js';
 import drawNewsList from './draw-news-list.js';
 import drawError from './draw-error.js';
 import {setMainParameters, setPaginationParameters} from './set-parameters';
@@ -11,8 +10,15 @@ import Pagination from './pagination.js';
 import {mainParameters, paginationParameters} from './url-parameters';
 
 const fetchNews = async () => {
+  document.querySelector('.show-news-button__wrapper').style.display = 'none';
+
   const paginationRoot = document.querySelector('.pagination');
   try {
+    const { default: getNews } = await import(
+      /* webpackChunkName: 'get-news.js' */
+      /* webpackMode: 'lazy' */
+      './get-news.js'
+    );
     const data = await getNews();
   
     if (data.status === 'ok') {
@@ -41,7 +47,9 @@ const fetchNews = async () => {
 };
 
 window.addEventListener('load', () => {
-  fetchNews();
+  const showNewsButton = document.querySelector('.show-news-button');
+
+  showNewsButton.addEventListener('click', () => fetchNews());
     
   /* Minimize header height when scroll down */
   const html = document.querySelector('html');

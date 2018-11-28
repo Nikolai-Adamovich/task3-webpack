@@ -13,8 +13,9 @@ module.exports = (env, options) => {
     entry: './src/js/index.js',
     output: {
       path: path.resolve(__dirname, './dist'),
-      filename: 'script.js',
-      publicPath: 'dist'
+      filename: '[name].js',
+      chunkFilename: '[name]',
+      publicPath: 'dist/'
     },
     devServer: {
       open: isProd ? false : 'Chrome',
@@ -23,7 +24,7 @@ module.exports = (env, options) => {
     },
     plugins: [
       new MiniCssExtractPlugin({
-        filename: 'style.css'
+        filename: '[name].css'
       }),
       new CopyWebpackPlugin([
         {

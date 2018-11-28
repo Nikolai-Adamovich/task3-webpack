@@ -5,12 +5,14 @@
   "license": "MIT",
   "main": "index.js",
   "scripts": {
-    "dev": "webpack-dev-server --mode development",
-    "build": "webpack --mode production"
+    "dev": "npm run clean && webpack-dev-server --mode development",
+    "build": "npm run clean && webpack --mode production",
+    "clean": "rm -rf dist"
   },
   "author": "Nikolai Adamovich",
   "devDependencies": {
     "@babel/core": "^7.1.2",
+    "@babel/plugin-syntax-dynamic-import": "^7.0.0",
     "@babel/preset-env": "^7.1.0",
     "autoprefixer": "^9.3.1",
     "babel-loader": "^8.0.4",
@@ -18,7 +20,7 @@
     "css-loader": "^1.0.1",
     "css-mqpacker": "^7.0.0",
     "cssnano": "^4.1.7",
-    "mini-css-extract-plugin": "^0.4.4",
+    "mini-css-extract-plugin": "^0.4.5",
     "node-sass": "^4.10.0",
     "postcss-import": "^12.0.1",
     "postcss-loader": "^3.0.0",

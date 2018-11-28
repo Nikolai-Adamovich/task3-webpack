@@ -1,3 +1,4 @@
+import '../scss/components/_news.scss';
 import {mainParameters, paginationParameters} from './url-parameters';
 
 const baseUrl = 'https://newsapi.org/v2/';
