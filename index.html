@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Task 3: webpack</title>
+  <link rel="shortcut icon" href="dist/img/favicon.ico">
+  <link rel="stylesheet" href="dist/style.css">
+</head>
+
+<body>
+  
+  <header class="header">
+    <div class="header__container">
+      <div class="header__title">Some News</div>
+      <div class="nav">
+        <div class="nav__button"></div>
+        <ul class="nav__menu">
+          <li class="nav__menu-item">
+            <div class="nav__menu-item-title">Search</div>
+            <input type="text" class="nav__search">
+          </li>
+          <li class="nav__menu-item">
+            <div class="nav__menu-item-title">Category</div>
+            <div class="nav__radio">
+              <input type="radio" name="category" value="" id="category-all" hidden checked>
+              <label class="nav__radio-label" for="category-all">All</label>
+              <input type="radio" name="category" value="business" id="category-business" hidden>
+              <label class="nav__radio-label" for="category-business">Business</label>
+              <input type="radio" name="category" value="entertainment" id="category-entertainment" hidden>
+              <label class="nav__radio-label" for="category-entertainment">Entertainment</label>
+              <input type="radio" name="category" value="general" id="category-general" hidden>
+              <label class="nav__radio-label" for="category-general">General</label>
+              <input type="radio" name="category" value="health" id="category-health" hidden>
+              <label class="nav__radio-label" for="category-health">Health</label>
+              <input type="radio" name="category" value="science" id="category-science" hidden>
+              <label class="nav__radio-label" for="category-science">Science</label>
+              <input type="radio" name="category" value="sports" id="category-sports" hidden>
+              <label class="nav__radio-label" for="category-sports">Sports</label>
+              <input type="radio" name="category" value="technology" id="category-technology" hidden>
+              <label class="nav__radio-label" for="category-technology">Technology</label>
+            </div>
+          </li>
+          <li class="nav__menu-item">
+            <div class="nav__menu-item-title">Country</div>
+            <div class="nav__radio">
+              <input type="radio" name="country" value="" id="country-all" hidden checked>
+              <label class="nav__radio-label" for="country-all">All</label>
+              <input type="radio" name="country" value="us" id="country-us" hidden>
+              <label class="nav__radio-label" for="country-us">USA</label>
+              <input type="radio" name="country" value="gb" id="country-gb" hidden>
+              <label class="nav__radio-label" for="country-gb">Great Britain</label>
+              <input type="radio" name="country" value="de" id="country-de" hidden>
+              <label class="nav__radio-label" for="country-de">Germany</label>
+              <input type="radio" name="country" value="gr" id="country-gr" hidden>
+              <label class="nav__radio-label" for="country-gr">Greece</label>
+              <input type="radio" name="country" value="fr" id="country-fr" hidden>
+              <label class="nav__radio-label" for="country-fr">France</label>
+              <input type="radio" name="country" value="au" id="country-au" hidden>
+              <label class="nav__radio-label" for="country-au">Australia</label>
+              <input type="radio" name="country" value="ru" id="country-ru" hidden>
+              <label class="nav__radio-label" for="country-ru">Russia</label>
+              <input type="radio" name="country" value="ua" id="country-ua" hidden>
+              <label class="nav__radio-label" for="country-ua">Ukraine</label>
+            </div>
+          </li>
+          <li class="nav__menu-item">
+            <div class="nav__buttons-wrapper">
+              <div class="nav__menu-button" id="clear">Clear</div>
+              <div class="nav__menu-button" id="apply">Apply</div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </header>
+  
+  <main class="main">
+    <div class="main__container">
+      <ul class="news"></ul>
+      <ul class="pagination"></ul>
+    </div>
+  </main>
+  
+  <footer class="footer">
+    <div class="footer__container">
+      <div>Created by <a href="https://github.com/Nikolai-Adamovich/task1-es6-newsapi">Mikalai Adamovich</a></div>
+      <div>Powered by <a href="https://newsapi.org">News API</a></div>
+    </div>
+  </footer>
+  
+  <script src="dist/script.js"></script>
+  
+</body>
+</html>

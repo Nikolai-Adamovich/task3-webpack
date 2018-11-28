@@ -1,0 +1,92 @@
+.nav {
+  position: relative;
+}
+
+.nav__button {
+  width: 1.5rem;
+  height: 1.5rem;
+  background: url(img/menu.svg) center / 1.5rem no-repeat;
+  cursor: pointer;
+}
+
+.nav__menu {
+  padding: 5px;
+  max-height: calc(100vh - 54px);
+  display: none;
+  position: fixed;
+  top: 54px;
+  right: 0;
+  overflow-y: auto;
+  font-size: 1rem;
+  background: $teal;
+  transition: ease-in-out 0.3s;
+  z-index: 10;
+  
+  .header--small & {
+    max-height: calc(100vh - 30px);
+    top: 30px;
+  }
+  
+  &--visible {
+    display: block;
+  }
+}
+
+.nav__menu-item {
+  padding: 5px 12px;
+}
+
+.nav__search {
+  width: calc(100vw - 40px);
+  max-width: 200px;
+  padding: 5px;
+  color: $teal;
+  border: none;
+}
+
+.nav__radio {
+  display: flex;
+  flex-direction: column;
+}
+
+.nav__radio-label {
+  padding-left: 15px;
+  position: relative;
+  cursor: pointer;
+  
+  &:hover {
+    background: darken($teal, 5%);
+  }
+  
+  input:checked + & {
+    &:before {
+      display: block;
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 5px;
+      width: 5px;
+      height: 5px;
+      transform: translateY(-50%);
+      border-radius: 50%;
+      background-color: $light-gray;
+    }
+  }
+}
+
+.nav__buttons-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav__menu-button {
+  padding: 7px 15px;
+  font-size: 0.85rem;
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+  color: $teal;
+  background: $light-gray;
+  border-radius: 3px;
+  cursor: pointer;
+}

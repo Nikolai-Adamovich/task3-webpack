@@ -1,0 +1,14 @@
+.error {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 600px;
+  height: 100%;
+  align-self: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+  color: $teal;
+}

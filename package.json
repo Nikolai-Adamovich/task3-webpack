@@ -1,0 +1,35 @@
+{
+  "name": "task3-webpack",
+  "version": "1.0.0",
+  "description": "Application based on es6 features and newsapi",
+  "license": "MIT",
+  "main": "index.js",
+  "scripts": {
+    "dev": "webpack-dev-server --mode development",
+    "build": "webpack --mode production"
+  },
+  "author": "Nikolai Adamovich",
+  "devDependencies": {
+    "@babel/core": "^7.1.2",
+    "@babel/preset-env": "^7.1.0",
+    "autoprefixer": "^9.3.1",
+    "babel-loader": "^8.0.4",
+    "copy-webpack-plugin": "^4.6.0",
+    "css-loader": "^1.0.1",
+    "css-mqpacker": "^7.0.0",
+    "cssnano": "^4.1.7",
+    "mini-css-extract-plugin": "^0.4.4",
+    "node-sass": "^4.10.0",
+    "postcss-import": "^12.0.1",
+    "postcss-loader": "^3.0.0",
+    "sass-loader": "^7.1.0",
+    "webpack": "^4.23.1",
+    "webpack-cli": "^3.1.2",
+    "webpack-dev-server": "^3.1.10"
+  },
+  "dependencies": {
+    "@babel/polyfill": "^7.0.0",
+    "normalize.css": "^8.0.0",
+    "whatwg-fetch": "^3.0.0"
+  }
+}

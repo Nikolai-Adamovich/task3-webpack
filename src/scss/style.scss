@@ -1,0 +1,11 @@
+@import '../../node_modules/normalize.css/normalize.css';
+@import 'base';
+@import 'variables';
+@import 'mixins';
+@import 'components/header';
+@import 'components/nav';
+@import 'components/main';
+@import 'components/footer';
+@import 'components/news';
+@import 'components/error';
+@import 'components/pagination';

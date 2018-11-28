@@ -1,0 +1,32 @@
+@mixin breakpoint($breakpoint) {
+  @media (min-width: $breakpoint) {
+    @content;
+  }
+}
+
+@mixin container() {
+  margin: 0 auto;
+  padding: 0 10px;
+  width: 100%;
+  max-width: 1400px;
+  
+  @include breakpoint($small) {
+    padding: 0 20px;
+  }
+  
+  @include breakpoint($medium) {
+    padding: 0 30px;
+  }
+  
+  @include breakpoint($large) {
+    padding: 0 40px;
+  }
+}
+
+@mixin clear-fix() {
+  &::after {
+    display: block;
+    content: '';
+    clear: both;
+  }
+}

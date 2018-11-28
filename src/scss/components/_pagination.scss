@@ -1,0 +1,45 @@
+.pagination {
+  display: none;
+  margin-top: 20px;
+  user-select: none;
+  
+  &--visible {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+.pagination__item {
+  margin-top: 10px;
+  padding: 5px 10px;
+  font-weight: bold;
+  color: $light-gray;
+  background: $teal;
+  border-left: 1px solid $light-gray;
+  cursor: pointer;
+  
+  &:first-child {
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+  }
+  
+  &:last-child {
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+  }
+  
+  &:hover:not(&--active):not(&--disabled) {
+    background: darken($teal, 5%);
+  }
+  
+  &--active {
+    background: darken($teal, 10%);
+    cursor: not-allowed;
+  }
+  
+  &--disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+}

@@ -1,0 +1,14 @@
+.main {
+  display: table-row;
+  height: 100%;
+  background: $light-gray;
+}
+
+.main__container {
+  @include container();
+  padding-top: 53px !important;
+  padding-bottom: 40px !important;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}

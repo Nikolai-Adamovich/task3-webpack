@@ -1,0 +1,24 @@
+.header {
+  padding: 15px 0;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: $light-gray;
+  background: $teal;
+  transition: padding ease-in-out 0.3s;
+  z-index: 20;
+  user-select: none;
+  
+  &--small {
+    padding: 3px 0;
+  }
+}
+
+.header__container {
+  @include container();
+  display: flex;
+  justify-content: space-between;
+}
