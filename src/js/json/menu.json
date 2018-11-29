@@ -1,0 +1,108 @@
+{
+  "categories": [
+    {
+      "id": "category-all",
+      "attributes": "hidden checked",
+      "value": "",
+      "text": "All"
+    },
+    {
+      "id": "category-business",
+      "attributes": "hidden",
+      "value": "business",
+      "text": "Business"
+    },
+    {
+      "id": "category-entertainment",
+      "attributes": "hidden",
+      "value": "entertainment",
+      "text": "Entertainment"
+    },
+    {
+      "id": "category-general",
+      "attributes": "hidden",
+      "value": "general",
+      "text": "General"
+    },
+    {
+      "id": "category-health",
+      "attributes": "hidden",
+      "value": "health",
+      "text": "Health"
+    },
+    {
+      "id": "category-science",
+      "attributes": "hidden",
+      "value": "science",
+      "text": "Science"
+    },
+    {
+      "id": "category-sports",
+      "attributes": "hidden",
+      "value": "sports",
+      "text": "Sports"
+    },
+    {
+      "id": "category-technology",
+      "attributes": "hidden",
+      "value": "technology",
+      "text": "Technology"
+    }
+  ],
+  "countries": [
+    {
+      "id": "country-all",
+      "attributes": "hidden checked",
+      "value": "",
+      "text": "All"
+    },
+    {
+      "id": "country-us",
+      "attributes": "hidden",
+      "value": "us",
+      "text": "USA"
+    },
+    {
+      "id": "country-gb",
+      "attributes": "hidden",
+      "value": "gb",
+      "text": "Great Britain"
+    },
+    {
+      "id": "country-de",
+      "attributes": "hidden",
+      "value": "de",
+      "text": "Germany"
+    },
+    {
+      "id": "country-gr",
+      "attributes": "hidden",
+      "value": "gr",
+      "text": "Greece"
+    },
+    {
+      "id": "country-fr",
+      "attributes": "hidden",
+      "value": "fr",
+      "text": "France"
+    },
+    {
+      "id": "country-au",
+      "attributes": "hidden",
+      "value": "au",
+      "text": "Australia"
+    },
+    {
+      "id": "country-ru",
+      "attributes": "hidden",
+      "value": "ru",
+      "text": "Russia"
+    },
+    {
+      "id": "country-ua",
+      "attributes": "hidden",
+      "value": "ua",
+      "text": "Ukraine"
+    }
+  ]
+}
