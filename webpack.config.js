@@ -39,6 +39,10 @@ module.exports = (env, options) => {
     module: {
       rules: [
         {
+          test: /\.json$/,
+          loader: path.resolve(__dirname, './src/js/custom-loader/translate-loader.js')
+        },
+        {
           test: /\.js$/,
           loader: 'babel-loader',
           exclude: '/node_modules'

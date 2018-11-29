@@ -9,6 +9,8 @@ import {setMainParameters, setPaginationParameters} from './set-parameters';
 import Pagination from './pagination.js';
 import {mainParameters, paginationParameters} from './url-parameters';
 
+const {categories, countries} = require('./json/menu.json');
+
 const fetchNews = async () => {
   document.querySelector('.show-news-button__wrapper').style.display = 'none';
 
@@ -47,6 +49,34 @@ const fetchNews = async () => {
 };
 
 window.addEventListener('load', () => {
+  /* Draw menu Categories & Counties from json (translated by custom loader) */
+  const categoriesWrapper = document.querySelector('#categories-wrapper');
+  for (const {
+    id,
+    attributes,
+    value,
+    text
+  } of categories) {
+    categoriesWrapper.insertAdjacentHTML('beforeend',
+      `<input type="radio" name="category" value="${value}" id="${id}" ${attributes}>
+      <label class="nav__radio-label" for="${id}">${text}</label>`
+    );
+  }
+  
+  const countriesWrapper = document.querySelector('#countries-wrapper');
+  for (const {
+    id,
+    attributes,
+    value,
+    text
+  } of countries) {
+    countriesWrapper.insertAdjacentHTML('beforeend',
+      `<input type="radio" name="country" value="${value}" id="${id}" ${attributes}>
+      <label class="nav__radio-label" for="${id}">${text}</label>`
+    );
+  }
+
+  /* Load news only when press button */
   const showNewsButton = document.querySelector('.show-news-button');
 
   showNewsButton.addEventListener('click', () => fetchNews());
@@ -70,10 +100,11 @@ window.addEventListener('load', () => {
   /* Clear search parameters and send default request */
   const clearBtn = document.querySelector('#clear');
   const searchTextInput = document.querySelector('.nav__search');
-  const categoryDefaultInput = document.querySelector('#category-all');
-  const countryDefaultInput = document.querySelector('#country-all');
   
   clearBtn.addEventListener('click', () => {
+    const categoryDefaultInput = document.querySelector('#category-all');
+    const countryDefaultInput = document.querySelector('#country-all');
+
     searchTextInput.value = '';
     categoryDefaultInput.checked = true;
     countryDefaultInput.checked = true;
